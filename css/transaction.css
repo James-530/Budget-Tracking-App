@@ -38,14 +38,14 @@
     background-color: var(--value);
 }
 
-.budget-table {
+.transaction-table {
     width: 100%;
     border-collapse: collapse;
     text-align: left;
     font-size: 0.95rem;
 }
 
-.budget-table th {
+.transaction-table th {
     background-color: var(--container);
     color: var(--text);
     padding: 14px 16px;
@@ -55,31 +55,31 @@
     letter-spacing: 0.05em;
 }
 
-.budget-table th:first-child {
+.transaction-table th:first-child {
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
 }
 
-.budget-table th:last-child {
+.transaction-table th:last-child {
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
 }
 
-.budget-table td {
+.transaction-table td {
     padding: 16px;
     border-bottom: 1px solid rgba(148, 163, 184, 0.2);
     color: var(--text);
 }
 
-.budget-table tbody tr {
+.transaction-table tbody tr {
     transition: background-color 0.2s ease;
 }
 
-.budget-table tbody tr:hover {
+.transaction-table tbody tr:hover {
     background-color: rgba(148, 163, 184, 0.08);
 }
 
-.budget-table tbody tr:last-child td {
+.transaction-table tbody tr:last-child td {
     border-bottom: none;
 }
 
@@ -97,7 +97,6 @@
 }
 
 .form-content {
-    background-color: #fff;
     padding: 24px;
     border-radius: 8px;
     width: 90%;
@@ -134,12 +133,15 @@
     font-size: 0.9rem;
 }
 
-.form-group input {
+.form-group input,
+.form-group select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    background-color: var(--card);
+    color: var(--text);
 }
 
 .submit-btn {
@@ -152,6 +154,7 @@
     font-weight: bold;
     cursor: pointer;
     font-size: 1rem;
+    transition: background 0.2s ease;
 }
 
 .submit-btn:hover {
@@ -183,12 +186,12 @@
         margin-right: 0 !important;
     }
 
-    .budget-table {
+    .transaction-table {
         min-width: 650px !important;
     }
     
-    .budget-table td, 
-    .budget-table th {
+    .transaction-table td, 
+    .transaction-table th {
         padding: 12px 8px;
         font-size: 0.85rem;
     }
